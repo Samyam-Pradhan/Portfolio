@@ -1,11 +1,10 @@
-import profile from "../images/samyam.jpg";
 import "../assets/Hero.css";
 
 const Hero = () => {
   return (
     <section id="profile">
       <div className="section-img">
-        <img src={profile} alt="Hero Background" />
+      <img src="public\samyam.jpg" alt="Project 1" />
       </div>
       <div className="section-text">
         <p>Hello, I'm</p>

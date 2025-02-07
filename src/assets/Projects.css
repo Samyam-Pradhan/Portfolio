@@ -4,7 +4,6 @@
     text-align: center;
     padding-top: 5vh;
     margin-top: -300px; /* Adjusted margin-top for a more natural gap */
-   
 }
 
 .projects-container {
@@ -59,4 +58,11 @@
     font-size: 1.2rem;
     color: #555;
     line-height: 1.6;
+}
+
+/* Make the project cards responsive */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%; /* Take full width on small screens */
+  }
 }
