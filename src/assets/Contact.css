@@ -1,51 +1,115 @@
-/* Contact Section */
-#contact {
-    padding: 60px 10%;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: -400px;
+.contact {
+  padding: 3rem 1rem;
+  max-height: 400px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  color: #2d3436;
+  margin-bottom: 1.5rem;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  color: #636e72;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #2d3436;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+  justify-content: center;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: #0984e3;
+  color: white;
+  text-decoration: none;
+}
+
+.contact-link:first-child {
+  background: #ea4335;
+  color: white;
+}
+
+.contact-link:first-child:hover {
+  background: #d63a2f;
+}
+
+.contact-link:last-child {
+  background: #0077b5;
+  color: white;
+}
+
+.contact-link:last-child:hover {
+  background: #006396;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .contact-container {
-    max-width: 800px;
-    margin: auto;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  #contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-decoration: underline;
+}
+
+.contact-container {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 2.5rem 1rem;
   }
-  
-  #contact p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
+
+  .contact-container h2 {
+    font-size: 2rem;
   }
-  
-  .contact-links {
-    display: flex;
-    justify-content: center;  
-    gap: 50px;  
-    align-items: center;
+
+  .contact-container p {
+    font-size: 1rem;
   }
-  
+
   .contact-link {
-    font-size: 1.5rem;
-    color:black; 
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
+    min-width: 260px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
-  
-  .contact-link:hover {
-    color: #005bb5; 
-    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .contact-link {
+    min-width: 220px;
   }
-  
-  .contact-link svg {
-    margin-right: 10px; 
-  }
-  
+}

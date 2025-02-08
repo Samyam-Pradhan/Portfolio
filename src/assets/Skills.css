@@ -4,11 +4,14 @@
     text-align: center;
     padding-top: 0vh; 
     margin-top: -100px; 
+
+    max-height: 400px;
 }
 
 .skills-container {
-    max-width: 800px;
+    max-width: 500px;
     margin: auto;
+
 }
 
 #skills h2 {
