@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section id="profile">
       <div className="section-img">
-      <img src="public\samyam.jpg" alt="Project 1" />
+      <img src="\samyam.jpg" alt="Project 1" />
       </div>
       <div className="section-text">
         <p>Hello, I'm</p>
