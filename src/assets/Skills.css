@@ -1,21 +1,20 @@
 /* Skills Section */
 #skills {
-    padding: 40px 10%;
+    padding: 40px 5%;
     text-align: center;
     padding-top: 0vh; 
     margin-top: -100px; 
-
     max-height: 400px;
 }
 
 .skills-container {
-    max-width: 500px;
+    max-width: 90%;
     margin: auto;
-
 }
 
+/* Section Heading */
 #skills h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 15px;
     text-decoration: underline;
 }
@@ -24,7 +23,8 @@
 .skills-flex {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-top: 20px;
 }
 
@@ -33,13 +33,47 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    font-size: 3rem; /* Adjust icon size */
+    font-size: 2.5rem; /* Adjust icon size */
     transition: transform 0.3s ease-in-out;
 }
 
-/* Removing hover effect on background color to keep original colors */
+/* Hover Effect */
 .skill:hover {
     transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #skills {
+        margin-top: -50px;
+        max-height: none;
+    }
+
+    .skills-flex {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .skill {
+        font-size: 2rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #skills h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skill {
+        font-size: 1.8rem;
+        padding: 8px;
+    }
 }
