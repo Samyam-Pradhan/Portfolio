@@ -21,20 +21,7 @@ export const Footer = () => {
                     <FaLinkedin size={30} />
                 </a>
             </div>
-            <ul className="list">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <a href="#">Privacy Policy</a>
-                </li>
-            </ul>
+            
             <p className="copyright">
                 Samyam Pradhan @ 2025 All Rights Reserved
             </p>
