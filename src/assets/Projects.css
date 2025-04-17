@@ -1,68 +1,47 @@
 #projects {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .projects-container {
-    max-width: 950px;
-    margin: 0 auto;
-  }
-  
-  .projects-container h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .projects-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .project-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 3px solid #007bff;
-  }
-  
-  .project-card .project-info {
-    padding: 15px;
-  }
-  
-  .project-card .project-info h3 {
-    font-size: 1.5rem;
-    color: #007bff;
-    margin-bottom: 10px;
-  }
-  
-  .project-card .project-info p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.4;
-  }
-  
-  @media (max-width: 768px) {
-    .projects-cards {
-      grid-template-columns: 1fr;
-    }
-    .projects-container h2 {
-      font-size: 2rem;
-    }
-  }
-  
+  padding: 60px 20px;
+  text-align: center;
+}
+#projects h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+.projects-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.projects-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* space between each project */
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+.project-card img {
+  width: 350px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.project-info p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
