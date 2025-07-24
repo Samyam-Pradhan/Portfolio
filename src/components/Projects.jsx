@@ -10,14 +10,14 @@ const Projects = () => {
             <img src="/Project1.png" alt="Project 1" />
             <div className="project-info">
               <h3>Project 1</h3>
-              <p>Real Time Face Mask Detection System Using CNN</p>
+              <p>Real Time Face Mask Detection web app built using React and FastAPI</p>
             </div>
           </div>
           <div className="project-card">
             <img src="/Project2.png" alt="Project 2" />
             <div className="project-info">
               <h3>Project 2</h3>
-              <p>Role Based Authentication Admin and User</p>
+              <p>A personal note-taking app built with Laravel and SQLite, featuring user authentication and CRUD functionality.</p>
             </div>
           </div>
           <div className="project-card">

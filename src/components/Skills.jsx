@@ -3,7 +3,7 @@ import { FaJs, FaReact, FaNodeJs, FaHtml5 } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
 import { 
   SiMongodb, SiExpress, SiC, SiCplusplus, SiGit, SiPostman, 
-  SiDocker, SiNginx,SiMysql
+  SiDocker, SiNginx,SiMysql,SiLaravel,SiGithubactions
 } from "react-icons/si"; 
 import { IoLogoCss3 } from "react-icons/io";
 
@@ -32,6 +32,7 @@ const Skills = () => {
               <div className="skill"><SiExpress className="skill-icon" /><p>Express</p></div>
               <div className="skill"><SiC className="skill-icon" /><p>C</p></div>
               <div className="skill"><SiCplusplus className="skill-icon" /><p>C++</p></div>
+              <div className="skill"><SiLaravel className="skill-icon" /><p>Laravel</p></div>
               <div className="skill"><SiMongodb className="skill-icon" /><p>MongoDB</p></div>
               <div className="skill"><SiMysql className="skill-icon" /><p>MySql</p></div>
 
@@ -48,6 +49,7 @@ const Skills = () => {
             <div className="skill"><SiDocker className="skill-icon" /><p>Docker</p></div>
             <div className="skill"><SiNginx className="skill-icon" /><p>Nginx</p></div>
             <div className="skill"><FaAws className="skill-icon" /><p>AWS</p></div>
+             <div className="skill"><SiGithubactions className="skill-icon" /><p>Github Actions</p></div>
           </div>
         </div>
       </div>
