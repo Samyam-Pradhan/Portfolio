@@ -1,7 +1,5 @@
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
-/* ── Theme variables ─────────────────────────────────────────────────── */
 :root {
   --background:             240 6% 7%;
   --foreground:             40 20% 92%;
@@ -39,7 +37,6 @@
   --sidebar-background:     240 5% 10%;
 }
 
-/* ── Base ────────────────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -73,7 +70,6 @@ a, button {
   transition: all 0.2s ease;
 }
 
-/* ── Utility classes ─────────────────────────────────────────────────── */
 .font-display   { font-family: var(--font-display); }
 .font-body      { font-family: var(--font-body); }
 
@@ -83,58 +79,6 @@ a, button {
   color: transparent;
   background-image: linear-gradient(to right, hsl(var(--primary)), #fbbf24);
 }
-
-/* ── Shared component styles ─────────────────────────────────────────── */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  font-size: 1rem;
-  font-family: var(--font-body);
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-  transition: opacity 0.2s;
-}
-.btn-primary:hover { opacity: 0.85; }
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  font-size: 1rem;
-  font-family: var(--font-body);
-  cursor: pointer;
-  text-decoration: none;
-  background: transparent;
-  border: 2px solid hsl(var(--primary));
-  color: hsl(var(--primary));
-  transition: background 0.2s;
-}
-.btn-outline:hover { background: hsl(var(--primary) / 0.1); }
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: 500;
-  font-family: var(--font-body);
-  text-decoration: none;
-  background: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
-  border: 1px solid hsl(var(--border));
-  transition: opacity 0.2s;
-}
-.btn-secondary:hover { opacity: 0.8; }
 
 .section-container {
   max-width: 1200px;
@@ -149,97 +93,4 @@ a, button {
   color: hsl(var(--foreground));
   text-align: center;
   margin-bottom: 3rem;
-}
-
-/* ── Card ────────────────────────────────────────────────────────────── */
-.card {
-  background: hsl(var(--card));
-  border: 1px solid hsl(var(--border));
-  border-radius: var(--radius);
-}
-
-/* ── Form inputs ─────────────────────────────────────────────────────── */
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  font-family: var(--font-body);
-  background: hsl(var(--background));
-  border: 1px solid hsl(var(--input));
-  color: hsl(var(--foreground));
-  outline: none;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
-}
-.form-input:focus,
-.form-textarea:focus {
-  border-color: hsl(var(--primary));
-}
-.form-input       { margin-bottom: 1rem; }
-.form-textarea    { margin-bottom: 1.5rem; resize: vertical; }
-
-/* ── Project card hover ──────────────────────────────────────────────── */
-.project-card {
-  padding: 2rem;
-  border-radius: var(--radius);
-  text-align: center;
-  background: hsl(var(--card));
-  border: 1px solid hsl(var(--border));
-  box-shadow: 0 10px 20px -5px hsl(var(--primary) / 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 30px -10px hsl(var(--primary) / 0.2);
-}
-
-/* ── Skill badge ─────────────────────────────────────────────────────── */
-.skill-badge {
-  padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  font-size: 1rem;
-  font-family: var(--font-body);
-  background: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
-  border: 1px solid hsl(var(--border));
-}
-
-/* ── Nav link ────────────────────────────────────────────────────────── */
-.nav-link {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  font-family: var(--font-body);
-  padding: 0.5rem 0;
-  text-transform: capitalize;
-  color: hsl(var(--foreground));
-  transition: color 0.2s;
-}
-.nav-link:hover { color: hsl(var(--primary)); }
-
-/* ── Mobile nav ──────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
-  .hamburger { display: block !important; }
-  .nav-list  { display: none; }
-  .nav-list.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 1rem;
-    right: 1rem;
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
-    border-radius: var(--radius);
-    padding: 1rem;
-    gap: 1rem;
-    z-index: 99;
-  }
-}
-@media (min-width: 769px) {
-  .hamburger { display: none !important; }
-  .nav-list  { display: flex !important; }
 }
