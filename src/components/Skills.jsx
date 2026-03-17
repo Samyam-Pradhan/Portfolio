@@ -1,7 +1,7 @@
 import { 
   Globe, 
   Database, 
-  Cloud
+  Wrench
 } from "lucide-react";
 import { 
   FaHtml5,
@@ -49,7 +49,7 @@ const skillCategories = [
   },
   {
     title: "Tools",
-    icon: Cloud,
+    icon: Wrench,
     skills: [
       { name: "Git", icon: FaGitAlt },
       { name: "Docker", icon: FaDocker },
@@ -73,13 +73,10 @@ const Skills = () => {
             My <span className="text-gradient">Toolbox</span>
           </h2>
         </div>
-
-        {/* Skills Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div key={category.title}>
               <div className={`h-full bg-card border ${category.borderColor} rounded-xl p-8`}>
-                {/* Category Header */}
                 <div className="flex items-center gap-3 mb-6">
                   <div className={`p-3 rounded-lg bg-gradient-to-br ${category.color}`}>
                     <category.icon className="w-6 h-6 text-primary" />
@@ -88,8 +85,6 @@ const Skills = () => {
                     {category.title}
                   </h3>
                 </div>
-
-                {/* Skills List with Icons */}
                 <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill) => (
                     <div key={skill.name}>
