@@ -1,24 +1,24 @@
+import "./App.css";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import "./App.css";
-import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import About from "./components/About";
 import Contact from "./components/Contact";
-import { Footer } from "./components/Footer";
-const App = () =>{
+import Footer from "./components/Footer";
+
+const App = () => {
   return (
     <>
-    <Navbar />
-    <Hero />
-    <About />
-    <Skills />
-    <Projects />
-    <Contact />
-    <Footer />
+      <Navbar />
+      <Hero />
+      <Projects />
+      <Skills />
+      <Contact />
+      <Footer />
     </>
-  )
-  
-}
+  );
+};
 
 export default App;

@@ -1,56 +1,108 @@
-import "../assets/Skills.css";
-import { FaJs, FaReact, FaNodeJs, FaHtml5 } from "react-icons/fa"; 
-import { FaAws } from "react-icons/fa";
 import { 
-  SiMongodb, SiExpress, SiC, SiCplusplus, SiGit, SiPostman, 
-  SiDocker, SiNginx,SiMysql,SiLaravel,SiGithubactions
-} from "react-icons/si"; 
-import { IoLogoCss3 } from "react-icons/io";
+  Globe, 
+  Database, 
+  Cloud
+} from "lucide-react";
+import { 
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDocker,
+  FaAws
+} from "react-icons/fa";
+import { 
+  SiTailwindcss, 
+  SiFastapi, 
+  SiPostgresql,
+  SiDjango,
+  SiMongodb,
+  SiJenkins
+} from "react-icons/si";
+
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: Globe,
+    skills: [
+      { name: "HTML", icon: FaHtml5 },
+      { name: "CSS", icon: FaCss3Alt },
+      { name: "Tailwind", icon: SiTailwindcss },
+      { name: "React", icon: FaReact },
+    ],
+    color: "from-blue-500/20 to-cyan-500/10",
+    borderColor: "border-blue-500/20",
+  },
+  {
+    title: "Backend",
+    icon: Database,
+    skills: [
+      { name: "Node.js", icon: FaNodeJs },
+      { name: "Django", icon: SiDjango },
+      { name: "FastApi", icon: SiFastapi },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "PostgreSQL", icon: SiPostgresql },
+    ],
+    color: "from-green-500/20 to-emerald-500/10",
+    borderColor: "border-green-500/20",
+  },
+  {
+    title: "Tools",
+    icon: Cloud,
+    skills: [
+      { name: "Git", icon: FaGitAlt },
+      { name: "Docker", icon: FaDocker },
+      { name: "Jenkins", icon: SiJenkins },
+      { name: "AWS", icon: FaAws },
+    ],
+    color: "from-purple-500/20 to-pink-500/10",
+    borderColor: "border-purple-500/20",
+  },
+];
 
 const Skills = () => {
   return (
-    <section id="skills">
-      <div className="skills-container">
-        <h2>My Skills</h2>
-
-        {/* Frontend and Backend in same row */}
-        <div className="skills-row">
-          <div className="skills-category">
-            <h3>Frontend</h3>
-            <div className="skills-flex">
-              <div className="skill"><FaHtml5 className="skill-icon" /><p>HTML5</p></div>
-              <div className="skill"><IoLogoCss3 className="skill-icon" /><p>CSS3</p></div>
-              <div className="skill"><FaJs className="skill-icon" /><p>JavaScript</p></div>
-              <div className="skill"><FaReact className="skill-icon" /><p>React</p></div>
-            </div>
-          </div>
-
-          <div className="skills-category">
-            <h3>Backend</h3>
-            <div className="skills-flex">
-              <div className="skill"><FaNodeJs className="skill-icon" /><p>Node.js</p></div>
-              <div className="skill"><SiExpress className="skill-icon" /><p>Express</p></div>
-              <div className="skill"><SiC className="skill-icon" /><p>C</p></div>
-              <div className="skill"><SiCplusplus className="skill-icon" /><p>C++</p></div>
-              <div className="skill"><SiLaravel className="skill-icon" /><p>Laravel</p></div>
-              <div className="skill"><SiMongodb className="skill-icon" /><p>MongoDB</p></div>
-              <div className="skill"><SiMysql className="skill-icon" /><p>MySql</p></div>
-
-            </div>
-          </div>
+    <section id="skills" className="py-32 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-primary font-display text-sm tracking-widest uppercase mb-3">
+            Expertise
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold">
+            My <span className="text-gradient">Toolbox</span>
+          </h2>
         </div>
 
-        {/* Tools & Technologies below */}
-        <div className="skills-category">
-          <h3>Tools & Technologies</h3>
-          <div className="skills-flex">
-            <div className="skill"><SiGit className="skill-icon" /><p>Git</p></div>
-            <div className="skill"><SiPostman className="skill-icon" /><p>Postman</p></div>
-            <div className="skill"><SiDocker className="skill-icon" /><p>Docker</p></div>
-            <div className="skill"><SiNginx className="skill-icon" /><p>Nginx</p></div>
-            <div className="skill"><FaAws className="skill-icon" /><p>AWS</p></div>
-             <div className="skill"><SiGithubactions className="skill-icon" /><p>Github Actions</p></div>
-          </div>
+        {/* Skills Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {skillCategories.map((category, categoryIndex) => (
+            <div key={category.title}>
+              <div className={`h-full bg-card border ${category.borderColor} rounded-xl p-8`}>
+                {/* Category Header */}
+                <div className="flex items-center gap-3 mb-6">
+                  <div className={`p-3 rounded-lg bg-gradient-to-br ${category.color}`}>
+                    <category.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-semibold">
+                    {category.title}
+                  </h3>
+                </div>
+
+                {/* Skills List with Icons */}
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill) => (
+                    <div key={skill.name}>
+                      <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-secondary-foreground border border-border">
+                        <skill.icon className="w-4 h-4 text-primary/70" />
+                        <span className="text-sm font-display">{skill.name}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
