@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NAV_ITEMS = ["home", "work", "skills", "about", "contact"];
+const NAV_ITEMS = ["home", "work", "skills","contact"];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
