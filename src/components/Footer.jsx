@@ -12,7 +12,6 @@ const Footer = () => {
     >
       <p>
         © 2025 PORTFOLIO — SAMYAM PRADHAN{" "}
-        <i className="fas fa-heart" style={{ color: "hsl(var(--primary))" }} />
       </p>
     </footer>
   );
