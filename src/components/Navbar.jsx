@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-const NAV_ITEMS = ["home", "work", "skills","contact"];
-
+const NAV_ITEMS = ["home", "work", "skills", "contact"];
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -32,7 +31,6 @@ const Navbar = () => {
             position: "relative",
           }}
         >
-          {/* Logo */}
           <div
             className="font-display"
             style={{
@@ -45,8 +43,6 @@ const Navbar = () => {
           >
             SP
           </div>
-
-          {/* Hamburger (mobile) */}
           <button
             className="hamburger"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -56,7 +52,7 @@ const Navbar = () => {
               border: "none",
               fontSize: "1.8rem",
               cursor: "pointer",
-              display: "none", // overridden by CSS media query
+              display: "none", 
             }}
           >
             <i
@@ -64,8 +60,6 @@ const Navbar = () => {
               style={{ color: "hsl(var(--foreground))" }}
             />
           </button>
-
-          {/* Nav links */}
           <ul
             className={`nav-list${menuOpen ? " open" : ""}`}
             style={{
@@ -82,6 +76,18 @@ const Navbar = () => {
                   href={`#${item}`}
                   className="nav-link"
                   onClick={(e) => handleNavClick(e, item)}
+                  style={{
+                    textDecoration: "none",
+                    fontWeight: 500,
+                    fontSize: "1rem",
+                    fontFamily: "var(--font-body)",
+                    padding: "0.5rem 0",
+                    textTransform: "capitalize",
+                    color: "hsl(var(--foreground))",
+                    transition: "color 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => e.target.style.color = "hsl(var(--primary))"}
+                  onMouseLeave={(e) => e.target.style.color = "hsl(var(--foreground))"}
                 >
                   {item}
                 </a>
@@ -90,6 +96,38 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .hamburger {
+            display: block !important;
+          }
+          .nav-list {
+            display: none !important;
+          }
+          .nav-list.open {
+            display: flex !important;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 1rem;
+            right: 1rem;
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 1rem;
+            gap: 1rem;
+            z-index: 99;
+          }
+        }
+        @media (min-width: 769px) {
+          .hamburger {
+            display: none !important;
+          }
+          .nav-list {
+            display: flex !important;
+          }
+        }
+      `}</style>
     </header>
   );
 };
